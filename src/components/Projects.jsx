@@ -1,4 +1,4 @@
-"use client"
+hi"use client"
 
 import React, { useRef, useEffect } from "react"
 import Image from "next/image"
@@ -143,7 +143,7 @@ const Projects = () => {
     >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 shadow-md">
-          My Projects
+          Projects Completed
         </h2>
         <Slider {...settings}>
           {projects.map((project, index) => (
