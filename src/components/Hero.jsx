@@ -68,7 +68,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="bg-[url('/dots1.svg')] bg-no-repeat bg-center bg-cover pt-16 pb-8 text-white min-h-screen flex items-center">
+    <section className="bg-clip-text bg-gradient-to-r from-blue-950 to-slate-900 bg-center bg-cover pt-16 pb-8 text-white min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between">
           <motion.div

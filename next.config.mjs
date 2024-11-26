@@ -10,11 +10,21 @@ if (isGithubActions) {
 }
 
 const nextConfig = {
+  output: "export", // Add this line for static export
   assetPrefix: assetPrefix,
   basePath: basePath,
   trailingSlash: true,
   images: {
     unoptimized: true,
+  },
+  // Add this to handle static export routing
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      ...defaultPathMap,
+    }
   },
 }
 
