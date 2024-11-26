@@ -1,4 +1,4 @@
-hi"use client"
+"use client"
 
 import React, { useRef, useEffect } from "react"
 import Image from "next/image"
@@ -13,7 +13,7 @@ const projects = [
     title: "Waweru Advocates Website",
     description:
       "A fully responsive website built using React and Node.js for a law firm.",
-    image: "project1.JPG",
+    image: "/project1.JPG", // Updated to use public folder path
     technologies: ["React", "Node.js"],
     githubLink: "https://github.com/Kimdev-254/waweruAdvocates.git",
     liveLink: "https://example.com",
@@ -22,7 +22,7 @@ const projects = [
     title: "Firebase Form App for Student Documentation",
     description:
       "A Firebase-based app that manages student attachment reports and documentation.",
-    image: "project2.JPG",
+    image: "/project2.JPG",
     technologies: ["Next.js", "Firebase", "TailwindCSS"],
     githubLink: "https://github.com/Kimdev-254/Next.js-Firebase-app.git",
     liveLink: "https://attachmentdocs-fbce6.web.app/",
@@ -30,7 +30,7 @@ const projects = [
   {
     title: "Mobile App Mockup Design",
     description: "A high-fidelity mobile app mockup designed using Figma.",
-    image: "project3.JPG",
+    image: "/project3.JPG",
     technologies: ["Figma"],
   },
 ]
@@ -62,8 +62,8 @@ const ProjectCard = ({ project }) => {
         <Image
           src={project.image}
           alt={project.title}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6 text-white">
@@ -147,7 +147,7 @@ const Projects = () => {
         </h2>
         <Slider {...settings}>
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+            <ProjectCard key={project.title} project={project} />
           ))}
         </Slider>
       </div>
