@@ -18,14 +18,14 @@ const nextConfig = {
     unoptimized: true,
   },
   // Add this to handle static export routing
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      ...defaultPathMap,
-    }
-  },
+  // exportPathMap: async function (
+  //   defaultPathMap,
+  //   { dev, dir, outDir, distDir, buildId }
+  // ) {
+  //   return {
+  //     ...defaultPathMap,
+  //   }
+  // },
 }
 
 export default nextConfig
