@@ -13,7 +13,7 @@ const projects = [
     title: "Waweru Advocates Website",
     description:
       "A fully responsive website built using React and Node.js for a law firm.",
-    image: "project1.JPG", // Updated to use public folder path
+    image: "/project1.JPG", // Updated to use public folder path
     technologies: ["React", "Node.js"],
     githubLink: "https://github.com/Kimdev-254/waweruAdvocates.git",
     liveLink: "https://example.com",
@@ -22,7 +22,7 @@ const projects = [
     title: "Firebase Form App for Student Documentation",
     description:
       "A Firebase-based app that manages student attachment reports and documentation.",
-    image: "project2.JPG",
+    image: "/project2.JPG",
     technologies: ["Next.js", "Firebase", "TailwindCSS"],
     githubLink: "https://github.com/Kimdev-254/Next.js-Firebase-app.git",
     liveLink: "https://attachmentdocs-fbce6.web.app/",
@@ -30,7 +30,7 @@ const projects = [
   {
     title: "Mobile App Mockup Design",
     description: "A high-fidelity mobile app mockup designed using Figma.",
-    image: "project3.JPG",
+    image: "/project3.JPG",
     technologies: ["Figma"],
   },
 ]
