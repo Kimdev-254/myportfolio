@@ -118,7 +118,7 @@ const Hero = () => {
             <div className="relative w-64 h-64 md:w-96 md:h-96">
               <div className="absolute inset-0 bg-yellow-300 rounded-tr-[60px] rounded-bl-[60px] transform md:hidden"></div>
               <Image
-                src="/myimage.JPG"
+                src="myimage.JPG"
                 alt="Boniface Kimani"
                 fill
                 priority
