@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400&display=swap');
     
 :root {
   --primary: #0049db;
@@ -823,6 +824,62 @@ footer {
   }
 
   .floating-elements {
+    display: none;
+  }
+}
+
+//block styles
+/* Replace the existing .code-block styles with these */
+.code-block {
+  position: absolute;
+  opacity: 0.1;
+  color: var(--light);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  user-select: none;
+  z-index: 0;
+  line-height: 1.6;
+  white-space: pre;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-block.top-right {
+  top: 20%;
+  right: 5%;
+  transform: rotate(2deg);
+}
+
+.code-block.bottom-left {
+  bottom: 10%;
+  left: 5%;
+  transform: rotate(-2deg);
+}
+
+.code-block.skills-code {
+  top: 15%;
+  left: 5%;
+  transform: rotate(-5deg);
+}
+
+.code-block.projects-code {
+  bottom: 15%;
+  right: 5%;
+  transform: rotate(3deg);
+}
+
+.code-block.contact-code {
+  top: 20%;
+  right: 5%;
+  transform: rotate(-3deg);
+}
+
+/* Add media query to handle mobile responsiveness */
+@media (max-width: 768px) {
+  .code-block {
     display: none;
   }
 }
