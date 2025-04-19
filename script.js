@@ -3,11 +3,11 @@ function showToast(message, type) {
     toast.className = `toast ${type}`;
     toast.textContent = message;
     document.body.appendChild(toast);
-    
+
     setTimeout(() => {
         toast.classList.add('show');
     }, 100);
-    
+
     setTimeout(() => {
         toast.classList.remove('show');
         setTimeout(() => {
@@ -18,31 +18,32 @@ function showToast(message, type) {
 
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
     const formData = new FormData(this);
     const submitButton = this.querySelector('button[type="submit"]');
-    
-    // Disable button while sending
     submitButton.disabled = true;
-    
+
     fetch('d_mail.php', {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
+        showToast(data.message, data.status);
         if (data.status === 'success') {
-            showToast('Message sent successfully!', 'success');
             this.reset();
-        } else {
-            showToast('Failed to send message. Please try again.', 'error');
         }
     })
-    .catch(error => {
+    .catch((error) => {
+        console.error('Fetch error:', error); // 👈 shows what actually failed
         showToast('An error occurred. Please try again later.', 'error');
     })
     .finally(() => {
-        // Re-enable button after response
         submitButton.disabled = false;
     });
 });
