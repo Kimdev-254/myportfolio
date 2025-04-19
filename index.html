@@ -190,14 +190,16 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
       <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-form" id="contactForm">
+    
+      <!-- Wrap this in a <form> tag with id="contactForm" -->
+      <form id="contactForm" class="contact-form">
         <div class="form-group">
           <label class="form-label">Name</label>
-          <input type="text" name="name" class="form-input" placeholder="Your name" required>
+          <input type="text" name="name" class="form-input" placeholder="Your name" required />
         </div>
         <div class="form-group">
           <label class="form-label">Email</label>
-          <input type="email" name="email" class="form-input" placeholder="Your email" required>
+          <input type="email" name="email" class="form-input" placeholder="Your email" required />
         </div>
         <div class="form-group">
           <label class="form-label">Message</label>
@@ -205,8 +207,9 @@
         </div>
         <button type="submit" class="btn btn-primary">Send Message</button>
         <div id="formStatus"></div>
-      </div>
+      </form>
     </section>
+    
     
     <!-- Footer -->
     <footer>
