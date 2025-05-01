@@ -343,28 +343,6 @@ nav {
   transform: translateY(-3px);
 }
 
-.btn-agency {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  color: white !important;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.btn-agency:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  background: transparent;
-  border: 2px solid var(--secondary);
-}
-
-.btn-agency i {
-  font-size: 0.8em;
-  margin-left: 5px;
-}
-
 .section {
   padding: 6rem 0;
   position: relative;
