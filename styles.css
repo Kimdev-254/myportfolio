@@ -547,6 +547,22 @@ nav {
   resize: vertical;
 }
 
+.success-message {
+    color: #28a745;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.error-message {
+    color: #dc3545;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
 .floating-elements {
   position: absolute;
   width: 100%;
