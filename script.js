@@ -54,3 +54,25 @@ document.getElementById('contactForm').addEventListener('submit', function(event
             submitButton.disabled = false;
         });
 });
+
+// Add this to your existing script.js
+
+document.querySelectorAll('.project-img').forEach(container => {
+    const video = container.querySelector('.project-video');
+    
+    container.addEventListener('mouseenter', () => {
+        video.play().catch(err => console.log('Video autoplay failed:', err));
+    });
+    
+    container.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+});
+
+// Preload videos when page loads
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.project-video').forEach(video => {
+        video.load();
+    });
+});
