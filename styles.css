@@ -414,67 +414,101 @@ nav {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .project-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
   overflow: hidden;
-  transition: all 0.3s ease;
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.project-card:nth-child(1) { animation-delay: 0.2s; }
-.project-card:nth-child(2) { animation-delay: 0.4s; }
-.project-card:nth-child(3) { animation-delay: 0.6s; }
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .project-img {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: var(--bg-secondary);
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  margin: 0;
+  border-radius: 0;
 }
 
 .project-thumbnail,
 .project-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.4s ease-in-out;
-}
-
-.project-video {
-    opacity: 0;
-    transform: scale(1.05);
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.project-img:hover .project-thumbnail {
-    opacity: 0;
-}
-
-.project-img:hover .project-video {
-    opacity: 1;
-    transform: scale(1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.01);
 }
 
 .project-content {
   padding: 1.5rem;
+}
+
+/* Add hover effect for images */
+.project-card:hover .project-thumbnail,
+.project-card:hover .project-video {
+  transform: scale(1.05);
+  transition: transform 0.6s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .project-card {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-img {
+    aspect-ratio: 4/3;
+  }
+}
+
+.project-img:hover .project-thumbnail {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.project-img:hover .project-video {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Add a subtle overlay on hover */
+.project-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-img:hover::after {
+  opacity: 1;
 }
 
 .project-title {

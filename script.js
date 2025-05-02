@@ -55,24 +55,41 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         });
 });
 
-// Add this to your existing script.js
+// Project video interactions
+document.querySelectorAll('.project-card').forEach(card => {
+    const video = card.querySelector('.project-video');
+    let playPromise;
 
-document.querySelectorAll('.project-img').forEach(container => {
-    const video = container.querySelector('.project-video');
-    
-    container.addEventListener('mouseenter', () => {
-        video.play().catch(err => console.log('Video autoplay failed:', err));
+    card.addEventListener('mouseenter', () => {
+        if (video) {
+            playPromise = video.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Video play error:", error);
+                });
+            }
+        }
     });
-    
-    container.addEventListener('mouseleave', () => {
-        video.pause();
-        video.currentTime = 0;
+
+    card.addEventListener('mouseleave', () => {
+        if (video && playPromise !== undefined) {
+            playPromise.then(() => {
+                video.pause();
+                video.currentTime = 0;
+            }).catch(error => {
+                console.log("Video pause error:", error);
+            });
+        }
     });
 });
 
-// Preload videos when page loads
+// Preload videos for smoother playback
 window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.project-video').forEach(video => {
+    const videos = document.querySelectorAll('.project-video');
+    videos.forEach(video => {
         video.load();
+        // Add loading="lazy" to defer loading until needed
+        video.setAttribute('loading', 'lazy');
     });
 });
