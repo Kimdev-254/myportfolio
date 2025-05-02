@@ -26,10 +26,27 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     emailjs.send('service_uezhrln', 'template_qr6fin7', templateParams)
         .then(function(response) {
             formStatus.innerHTML = '<p class="success-message">Message sent successfully!</p>';
-            // Reset form
             document.getElementById('contactForm').reset();
+            
+            // Fade out and remove message
+            setTimeout(() => {
+                const message = formStatus.querySelector('.success-message');
+                message.classList.add('fade-out');
+                setTimeout(() => {
+                    formStatus.innerHTML = '';
+                }, 500);
+            }, 2500);
         }, function(error) {
             formStatus.innerHTML = '<p class="error-message">Failed to send message. Please try again.</p>';
+            
+            // Fade out and remove message
+            setTimeout(() => {
+                const message = formStatus.querySelector('.error-message');
+                message.classList.add('fade-out');
+                setTimeout(() => {
+                    formStatus.innerHTML = '';
+                }, 500);
+            }, 2500);
         })
         .finally(function() {
             // Restore button state
