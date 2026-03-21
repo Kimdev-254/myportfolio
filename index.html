@@ -1,432 +1,588 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kim dev | Fullstack Developer specializing in React, Node.js, and modern web technologies. Building high-performance web applications with a focus on user experience." />
+  <meta name="description" content="Boniface Kimani | Fullstack Developer specializing in React, Node.js, and modern web technologies. Building high-performance web applications with a focus on user experience." />
   <meta name="google-site-verification" content="google5484e6e22040bfc5.html" />
-  <title>Kim dev | Fullstack Developer</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  <title>Kim.dev | Fullstack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Noise texture overlay -->
-  <div class="noise"></div>
-  
-  <div class="container">
-    <!-- Navigation -->
-    <nav>
-      <a href="#" class="logo">
-        <span class="logo-dot"></span>Kim.dev
+
+  <!-- ======= NAVIGATION ======= -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Kim.dev home">
+        <span class="logo-bracket">&lt;</span>Kim.dev<span class="logo-bracket">/&gt;</span>
       </a>
-      <div class="nav-links">
+
+      <nav class="nav" aria-label="Primary navigation">
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+          <span class="theme-icon theme-icon--moon">
+            <i class="fas fa-moon"></i>
+          </span>
+          <span class="theme-icon theme-icon--sun">
+            <i class="fas fa-sun"></i>
+          </span>
+        </button>
+
+        <!-- Hire Me CTA -->
+        <a href="#contact" class="btn btn-sm btn-primary">Hire me</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
-    </nav>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-gradient"></div>
-      <div class="floating-elements">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-      </div>
-      
-      <div class="hero-content">
-        <p class="subtitle">FULLSTACK DEVELOPER</p>
-        <h1 class="title">Crafting digital experiences with code<span class="cursor"></span></h1>
-        <p class="description">I build high-performance web applications with modern technologies and a focus on user experience. From responsive frontends to scalable backends, I bring ideas to life.</p>
-        
-        <div class="tech-tags">
-          <div class="tech-tag">React</div>
-          <div class="tech-tag">Node.js</div>
-          <div class="tech-tag">TypeScript</div>
-          <div class="tech-tag">MongoDB</div>
-          <div class="tech-tag">Firebase</div>
-          <div class="tech-tag">Python</div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <nav class="mobile-nav">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= HERO ======= -->
+  <main>
+    <section class="hero" id="hero" aria-label="Introduction">
+      <!-- Ambient glow orbs -->
+      <div class="orb orb--1" aria-hidden="true"></div>
+      <div class="orb orb--2" aria-hidden="true"></div>
+      <div class="orb orb--3" aria-hidden="true"></div>
+
+      <!-- Grid pattern overlay -->
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-layout">
+        <!-- LEFT: Text content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Available for work</span>
+          </div>
+
+          <h1 class="hero-heading">
+            Crafting digital<br>
+            <span class="gradient-text">experiences</span> with code
+          </h1>
+
+          <p class="hero-desc">
+            I'm <strong>Boniface Kimani</strong> — a fullstack developer building high‑performance web applications with modern technologies and a focus on user experience.
+          </p>
+
+          <div class="hero-tags" aria-label="Tech stack">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Python</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              View My Work
+              <i class="fas fa-arrow-right btn-icon"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">Get In Touch</a>
+          </div>
+
+          <!-- Stats row -->
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Projects shipped</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Years coding</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Client satisfaction</span>
+            </div>
+          </div>
         </div>
-        
-        <div class="cta-buttons">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+
+        <!-- RIGHT: Photo + floating code snippet -->
+        <div class="hero-visual">
+          <div class="photo-wrapper">
+            <div class="photo-ring" aria-hidden="true"></div>
+            <div class="photo-ring photo-ring--2" aria-hidden="true"></div>
+            <div class="profile-photo">
+              <img src="assets/kimu.webp" alt="Boniface Kimani — Fullstack Developer" loading="eager">
+            </div>
+          </div>
+
+          <!-- Floating code card -->
+          <div class="code-card" aria-hidden="true">
+            <div class="code-card-bar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="code-card-title">developer.ts</span>
+            </div>
+            <pre class="code-body"><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">"Boniface Kimani"</span>,
+  <span class="c-prop">role</span>: <span class="c-str">"Fullstack Dev"</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">"React"</span>, <span class="c-str">"Node"</span>],
+  <span class="c-comment">// Always learning ✨</span>
+  <span class="c-prop">ship</span>: <span class="c-keyword">() =></span> <span class="c-bool">true</span>
+};</pre>
+          </div>
+
+          <!-- Floating tech badge -->
+          <div class="float-badge float-badge--tl" aria-hidden="true">
+            <i class="fab fa-react"></i> React
+          </div>
+          <div class="float-badge float-badge--br" aria-hidden="true">
+            <i class="fab fa-node-js"></i> Node.js
+          </div>
         </div>
       </div>
-      
-      <div class="photo-container">
-        <div class="profile-photo">
-          <img src="/assets/kimu.webp" alt="Kim dev - Fullstack Developer" />
-        </div>
-        <div class="photo-backdrop"></div>
-      </div>
-      
-      <div class="code-block top-right">
-        <span class="keyword">const</span> developer = {
-        &nbsp;&nbsp;<span class="property">name</span>: <span class="string">"Boniface Kimani"</span>,
-        &nbsp;&nbsp;<span class="property">title</span>: <span class="string">"Fullstack Developer"</span>,
-        &nbsp;&nbsp;<span class="property">skills</span>: [
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"JavaScript"</span>,
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"React"</span>,
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Node.js"</span>,
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Python"</span>
-        &nbsp;&nbsp;],
-        &nbsp;&nbsp;<span class="comment">// Always learning new things</span>
-        &nbsp;&nbsp;<span class="property">createAmazingApps</span>: () => <span class="keyword">true</span>
-      };
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-wheel"></div>
       </div>
     </section>
-    
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <h2 class="section-title">Technical Skills</h2>
-      <div class="tech-stack">
-        <div class="tech-item">
-          <i class="fab fa-react tech-icon"></i>
-          <span class="tech-name">React</span>
-        </div>
-        <div class="tech-item">
-          <i class="fab fa-node-js tech-icon"></i>
-          <span class="tech-name">Node.js</span>
-        </div>
-        <div class="tech-item">
-          <i class="fab fa-js tech-icon"></i>
-          <span class="tech-name">JavaScript</span>
-        </div>
-        <div class="tech-item">
-          <i class="fab fa-typescript tech-icon"></i>
-          <span class="tech-name">TypeScript</span>
-        </div>
-        <div class="tech-item">
-          <i class="fab fa-python tech-icon"></i>
-          <span class="tech-name">Python</span>
-        </div>
-        <div class="tech-item">
-          <i class="fas fa-database tech-icon"></i>
-          <span class="tech-name">MongoDB</span>
-        </div>
-        <div class="tech-item">
-          <i class="fab fa-aws tech-icon"></i>
-          <span class="tech-name">AWS</span>
-        </div>
-        <div class="tech-item">
-          <i class="fab fa-docker tech-icon"></i>
-          <span class="tech-name">Docker</span>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects">
-        <!-- Law Firm Project -->
-        <div class="project-card">
-          <div class="project-img">
-            <img 
-              src="/assets/projects/lawfirm.webp" 
-              alt="ReportScribe AI Preview" 
-              class="project-thumbnail"
-            />
-            <video 
-              class="project-video" 
-              muted 
-              loop 
-              playsinline 
-              preload="metadata"
-            >
-              <source src="/assets/projects/lawfirm.webm" type="video/webm">
-              <source src="/assets/projects/lawfirm.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Lawfirm Website</h3>
-            <p class="project-description">With an AI agent Integration</p>
-            <div class="project-tech">
-              <span class="project-tech-item">Next JS</span>
-              <span class="project-tech-item">Tailwind CSS</span>
-              <span class="project-tech-item">Hugging Face</span>
-              <span class="project-tech-item">Flask</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/alexisdev/nebula-ecommerce" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View Code
-              </a>
-              <a href="https://kennethwaweruadvocates.co.ke/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Visit Site
-              </a>
-            </div>
-          </div>
+
+    <!-- ======= ABOUT ======= -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">About me</span>
+          <h2 class="section-title" id="about-heading">Who I am</h2>
         </div>
 
-        <!--Land Investment Company website -->
-        <div class="project-card">
-          <div class="project-img">
-            <img 
-              src="/assets/projects/finder.webp" 
-              alt="finder Preview" 
-              class="project-thumbnail"
-            />
-            <video 
-              class="project-video" 
-              muted 
-              loop 
-              playsinline 
-              preload="metadata"
-            >
-              <source src="/assets/projects/finder.webm" type="video/webm">
-              <source src="/assets/projects/finder.mp4" type="video/mp4">
-            </video>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I'm a passionate fullstack developer based in <strong>Nairobi, Kenya</strong>, dedicated to building polished web products that deliver real value. From responsive frontends to scalable backends, I transform ideas into production-ready applications.</p>
+            <p>I work with modern JavaScript frameworks and tools like <strong>React, Next.js, Node.js, TypeScript</strong>, and cloud platforms. My approach blends clean code with thoughtful design — because great software should look as good as it performs.</p>
+            <a href="#contact" class="btn btn-outline">Let's collaborate →</a>
           </div>
-          <div class="project-content">
-            <h3 class="project-title">Land Investment Company</h3>
-            <p class="project-description">With Site Visit Booking</p>
-            <div class="project-tech">
-              <span class="project-tech-item">Next JS</span>
-              <span class="project-tech-item">Tailwind CSS</span>
-              <span class="project-tech-item">Node js</span>
+          <div class="about-card-grid">
+            <div class="info-card">
+              <div class="info-card-icon"><i class="fas fa-code"></i></div>
+              <h3>Clean Code</h3>
+              <p>Readable, maintainable, well-architected codebases that scale.</p>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/Kimdev-254/finder" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View Code
-              </a>
-              <a href="https://jacksamsproperties.co.ke/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Visit Site
-              </a>
+            <div class="info-card">
+              <div class="info-card-icon"><i class="fas fa-bolt"></i></div>
+              <h3>Performance</h3>
+              <p>Optimized for speed — Core Web Vitals, lazy loading, and more.</p>
             </div>
-          </div>
-        </div>
-        
-         <!-- kh -->
-        <div class="project-card">
-          <div class="project-img">
-            <img 
-              src="/assets/projects/kahameplumbers.webp" 
-              alt="kahameplumbers Preview" 
-              class="project-thumbnail"
-            />
-            <video 
-              class="project-video" 
-              muted 
-              loop 
-              playsinline 
-              preload="metadata"
-            >
-              <source src="/assets/projects/kahameplumbers.webm" type="video/webm">
-              <source src="/assets/projects/kahameplumbers.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Kahame Plumbers</h3>
-            <p class="project-description">Plumbing Company Portfolio</p>
-            <div class="project-tech">
-              <span class="project-tech-item">Next JS</span>
-              <span class="project-tech-item">Tailwind CSS</span>
-              <span class="project-tech-item">Zod</span>
-              <span class="project-tech-item">Node js</span>
+            <div class="info-card">
+              <div class="info-card-icon"><i class="fas fa-mobile-alt"></i></div>
+              <h3>Responsive</h3>
+              <p>Pixel-perfect designs that work flawlessly on every device.</p>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/Kimdev-254/kahameplumbers" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View Code
-              </a>
-              <a href="https://kahameplumbers.co.ke/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Visit Site
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Alkeir Foundation Project -->
-        <div class="project-card">
-          <div class="project-img">
-            <img 
-              src="/assets/projects/alkheir.webp" 
-              alt="finder Preview" 
-              class="project-thumbnail"
-            />
-            <video 
-              class="project-video" 
-              muted 
-              loop 
-              playsinline 
-              preload="metadata"
-            >
-              <source src="/assets/projects/alkheir.webm" type="video/webm">
-              <source src="/assets/projects/alkheir.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Alkeir Foundation</h3>
-            <p class="project-description">Empowerment Through Compassion</p>
-            <div class="project-tech">
-              <span class="project-tech-item">Next JS</span>
-              <span class="project-tech-item">Tailwind CSS</span>
-              <span class="project-tech-item">Email js</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Kimdev-254/alkheir" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View Code
-              </a>
-              <a href="https://alkheir.vercel.app/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Visit Site
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Nairobi Otoku Shop Project
-        <div class="project-card">
-          <div class="project-img">
-            <img 
-              src="/assets/projects/otoku.webp" 
-              alt="Nairobi Otoku Shop Preview" 
-              class="project-thumbnail"
-            />
-            <video 
-              class="project-video" 
-              muted 
-              loop 
-              playsinline 
-              preload="metadata"
-            >
-              <source src="/assets/projects/otoku-shop.webm" type="video/webm">
-              <source src="/assets/projects/otoku-shop.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Nairobi Otoku Shop</h3>
-            <p class="project-description">E-commerce platform specialized in anime merchandise and collectibles</p>
-            <div class="project-tech">
-              <span class="project-tech-item">Next.js</span>
-              <span class="project-tech-item">Stripe</span>
-              <span class="project-tech-item">Sanity CMS</span>
-              <span class="project-tech-item">TailwindCSS</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/yourusername/otoku-shop" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View Code
-              </a>
-              <a href="https://nairobiotakushop.co.ke" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Visit Site
-              </a>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Insta Report Project (In Development) -->
-        <div class="project-card">
-          <div class="project-img">
-            <img 
-              src="/assets/projects/insta-report.webp" 
-              alt="Insta Report Preview" 
-              class="project-thumbnail"
-            />
-            <video 
-              class="project-video" 
-              muted 
-              loop 
-              playsinline 
-              preload="metadata"
-            >
-              <source src="/assets/projects/instareport.webm" type="video/webm">
-              <source src="/assets/projects/instareport.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Insta Report</h3>
-            <p class="project-description">AI-powered report generator that creates professional reports in minutes</p>
-            <div class="project-tech">
-              <span class="project-tech-item">React</span>
-              <span class="project-tech-item">OpenAI</span>
-              <span class="project-tech-item">Python</span>
-              <span class="project-tech-item">FastAPI</span>
-            </div>
-            <div class="project-links">
-              <span class="coming-soon">Coming Soon</span>
-              <a href="https://instareport.vercel.app" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> View Demo
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- AttachmentDocs Project -->
-        <div class="project-card">
-          <div class="project-img">
-            <img 
-              src="/assets/projects/attachment.webp" 
-              alt="AttachmentDocs Preview" 
-              class="project-thumbnail"
-            />
-            <video 
-              class="project-video" 
-              muted 
-              loop 
-              playsinline 
-              preload="metadata"
-            >
-              <source src="/assets/projects/attachmentdocs.webm" type="video/webm">
-              <source src="/assets/projects/attachmentdocs.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">AttachmentDocs</h3>
-            <p class="project-description">A comprehensive platform for managing student reports and documentation</p>
-            <div class="project-tech">
-              <span class="project-tech-item">Next.js</span>
-              <span class="project-tech-item">Node.js</span>
-              <span class="project-tech-item">MongoDB</span>
-              <span class="project-tech-item">Express</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/yourusername/attachmentdocs" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View Code
-              </a>
-              <a href="https://attachmentdocs-fbce6.web.app/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Visit Site
-              </a>
+            <div class="info-card">
+              <div class="info-card-icon"><i class="fas fa-ship"></i></div>
+              <h3>Ship Fast</h3>
+              <p>From MVP to production without sacrificing quality or UX.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <h2 class="section-title">Get In Touch</h2>
-    
-      <!-- Wrap this in a <form> tag with id="contactForm" -->
-      <form id="contactForm" class="contact-form">
-        <div class="form-group">
-          <label class="form-label">Name</label>
-          <input type="text" name="name" class="form-input" placeholder="Your name" required />
+
+    <!-- ======= SKILLS ======= -->
+    <section id="skills" class="section section--alt" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What I work with</span>
+          <h2 class="section-title" id="skills-heading">Technical Skills</h2>
         </div>
-        <div class="form-group">
-          <label class="form-label">Email</label>
-          <input type="email" name="email" class="form-input" placeholder="Your email" required />
+
+        <div class="skills-grid">
+          <div class="skill-card" data-skill="React">
+            <div class="skill-icon"><i class="fab fa-react"></i></div>
+            <span class="skill-name">React</span>
+          </div>
+          <div class="skill-card" data-skill="Node.js">
+            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+            <span class="skill-name">Node.js</span>
+          </div>
+          <div class="skill-card" data-skill="JavaScript">
+            <div class="skill-icon"><i class="fab fa-js"></i></div>
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <div class="skill-card" data-skill="TypeScript">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <span class="skill-name">TypeScript</span>
+          </div>
+          <div class="skill-card" data-skill="Python">
+            <div class="skill-icon"><i class="fab fa-python"></i></div>
+            <span class="skill-name">Python</span>
+          </div>
+          <div class="skill-card" data-skill="MongoDB">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <span class="skill-name">MongoDB</span>
+          </div>
+          <div class="skill-card" data-skill="AWS">
+            <div class="skill-icon"><i class="fab fa-aws"></i></div>
+            <span class="skill-name">AWS</span>
+          </div>
+          <div class="skill-card" data-skill="Docker">
+            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+            <span class="skill-name">Docker</span>
+          </div>
+          <div class="skill-card" data-skill="Next.js">
+            <div class="skill-icon skill-icon--text">N</div>
+            <span class="skill-name">Next.js</span>
+          </div>
+          <div class="skill-card" data-skill="Git">
+            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+            <span class="skill-name">Git</span>
+          </div>
         </div>
-        <div class="form-group">
-          <label class="form-label">Message</label>
-          <textarea name="message" class="form-textarea" placeholder="Your message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-        <div id="formStatus"></div>
-      </form>
+      </div>
     </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/Kimdev-254" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/boniface-kimani-49ba6030a/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/Kimdev254" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://wa.me/+254719628538" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- ======= PROJECTS ======= -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What I've built</span>
+          <h2 class="section-title" id="projects-heading">Featured Projects</h2>
         </div>
-        <p>© 2024 Kim dev. All rights reserved.</p>
-    </footer>
-  </div>
+
+        <div class="projects-grid">
+
+          <!-- Law Firm Project -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/lawfirm.webp" alt="Lawfirm Website preview" class="project-thumb" loading="lazy">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/projects/lawfirm.webm" type="video/webm">
+                <source src="assets/projects/lawfirm.mp4" type="video/mp4">
+              </video>
+              <div class="project-media-overlay">
+                <span class="overlay-label"><i class="fas fa-play-circle"></i> Preview</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-num">01</span>
+                <span class="project-status project-status--live">Live</span>
+              </div>
+              <h3 class="project-title">Lawfirm Website</h3>
+              <p class="project-desc">Premium law firm site with AI agent integration for client queries and case intake — fully deployed and serving real clients.</p>
+              <div class="project-tags">
+                <span class="tag tag--sm">Next.js</span>
+                <span class="tag tag--sm">Tailwind CSS</span>
+                <span class="tag tag--sm">Hugging Face</span>
+                <span class="tag tag--sm">Flask</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Kimdev-254" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> Source
+                </a>
+                <a href="https://kennethwaweruadvocates.co.ke/" target="_blank" rel="noopener" class="project-link project-link--primary">
+                  Visit Site <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Land Investment -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/finder.webp" alt="Land investment site preview" class="project-thumb" loading="lazy">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/projects/finder.webm" type="video/webm">
+                <source src="assets/projects/finder.mp4" type="video/mp4">
+              </video>
+              <div class="project-media-overlay">
+                <span class="overlay-label"><i class="fas fa-play-circle"></i> Preview</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-num">02</span>
+                <span class="project-status project-status--live">Live</span>
+              </div>
+              <h3 class="project-title">Land Investment Company</h3>
+              <p class="project-desc">Full-featured real estate platform with property listings, advanced search, and an automated site visit booking system.</p>
+              <div class="project-tags">
+                <span class="tag tag--sm">Next.js</span>
+                <span class="tag tag--sm">Tailwind CSS</span>
+                <span class="tag tag--sm">Node.js</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Kimdev-254/finder" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> Source
+                </a>
+                <a href="https://jacksamsproperties.co.ke/" target="_blank" rel="noopener" class="project-link project-link--primary">
+                  Visit Site <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kahame Plumbers -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/kahameplumbers.webp" alt="Kahame Plumbers preview" class="project-thumb" loading="lazy">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/projects/kahameplumbers.webm" type="video/webm">
+                <source src="assets/projects/kahameplumbers.mp4" type="video/mp4">
+              </video>
+              <div class="project-media-overlay">
+                <span class="overlay-label"><i class="fas fa-play-circle"></i> Preview</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-num">03</span>
+                <span class="project-status project-status--live">Live</span>
+              </div>
+              <h3 class="project-title">Kahame Plumbers</h3>
+              <p class="project-desc">Professional plumbing company portfolio with service listings, contact forms, and schema validation for a clean user experience.</p>
+              <div class="project-tags">
+                <span class="tag tag--sm">Next.js</span>
+                <span class="tag tag--sm">Tailwind CSS</span>
+                <span class="tag tag--sm">Zod</span>
+                <span class="tag tag--sm">Node.js</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Kimdev-254/kahameplumbers" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> Source
+                </a>
+                <a href="https://kahameplumbers.co.ke/" target="_blank" rel="noopener" class="project-link project-link--primary">
+                  Visit Site <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Alkheir Foundation -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/alkheir.webp" alt="Alkheir Foundation preview" class="project-thumb" loading="lazy">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/projects/alkheir.webm" type="video/webm">
+                <source src="assets/projects/alkheir.mp4" type="video/mp4">
+              </video>
+              <div class="project-media-overlay">
+                <span class="overlay-label"><i class="fas fa-play-circle"></i> Preview</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-num">04</span>
+                <span class="project-status project-status--live">Live</span>
+              </div>
+              <h3 class="project-title">Alkheir Foundation</h3>
+              <p class="project-desc">Non-profit website centered on empowerment through compassion — featuring donation flows, impact stories, and contact integration.</p>
+              <div class="project-tags">
+                <span class="tag tag--sm">Next.js</span>
+                <span class="tag tag--sm">Tailwind CSS</span>
+                <span class="tag tag--sm">Email.js</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Kimdev-254/alkheir" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> Source
+                </a>
+                <a href="https://alkheir.vercel.app/" target="_blank" rel="noopener" class="project-link project-link--primary">
+                  Visit Site <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Insta Report -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/insta-report.webp" alt="Insta Report AI preview" class="project-thumb" loading="lazy">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/projects/instareport.webm" type="video/webm">
+                <source src="assets/projects/instareport.mp4" type="video/mp4">
+              </video>
+              <div class="project-media-overlay">
+                <span class="overlay-label"><i class="fas fa-play-circle"></i> Preview</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-num">05</span>
+                <span class="project-status project-status--wip">In Development</span>
+              </div>
+              <h3 class="project-title">Insta Report</h3>
+              <p class="project-desc">AI-powered report generator that creates professional, beautifully formatted reports in minutes using OpenAI and FastAPI.</p>
+              <div class="project-tags">
+                <span class="tag tag--sm">React</span>
+                <span class="tag tag--sm">OpenAI</span>
+                <span class="tag tag--sm">Python</span>
+                <span class="tag tag--sm">FastAPI</span>
+              </div>
+              <div class="project-links">
+                <a href="https://instareport.vercel.app" target="_blank" rel="noopener" class="project-link project-link--primary">
+                  View Demo <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AttachmentDocs -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/attachment.webp" alt="AttachmentDocs preview" class="project-thumb" loading="lazy">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/projects/attachmentdocs.webm" type="video/webm">
+                <source src="assets/projects/attachmentdocs.mp4" type="video/mp4">
+              </video>
+              <div class="project-media-overlay">
+                <span class="overlay-label"><i class="fas fa-play-circle"></i> Preview</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-num">06</span>
+                <span class="project-status project-status--live">Live</span>
+              </div>
+              <h3 class="project-title">AttachmentDocs</h3>
+              <p class="project-desc">Comprehensive platform for managing student industrial attachment reports and documentation with role-based access control.</p>
+              <div class="project-tags">
+                <span class="tag tag--sm">Next.js</span>
+                <span class="tag tag--sm">Node.js</span>
+                <span class="tag tag--sm">MongoDB</span>
+                <span class="tag tag--sm">Express</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Kimdev-254" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> Source
+                </a>
+                <a href="https://attachmentdocs-fbce6.web.app/" target="_blank" rel="noopener" class="project-link project-link--primary">
+                  Visit Site <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CONTACT ======= -->
+    <section id="contact" class="section section--alt" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Let's talk</span>
+          <h2 class="section-title" id="contact-heading">Get In Touch</h2>
+          <p class="section-sub">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Info panel -->
+          <div class="contact-info">
+            <div class="contact-channel">
+              <div class="contact-channel-icon"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <div class="contact-channel-label">WhatsApp</div>
+                <a href="https://wa.me/+254719628538" target="_blank" rel="noopener" class="contact-channel-value">+254 719 628 538</a>
+              </div>
+            </div>
+            <div class="contact-channel">
+              <div class="contact-channel-icon"><i class="fab fa-linkedin"></i></div>
+              <div>
+                <div class="contact-channel-label">LinkedIn</div>
+                <a href="https://www.linkedin.com/in/boniface-kimani-49ba6030a/" target="_blank" rel="noopener" class="contact-channel-value">Boniface Kimani</a>
+              </div>
+            </div>
+            <div class="contact-channel">
+              <div class="contact-channel-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <div class="contact-channel-label">GitHub</div>
+                <a href="https://github.com/Kimdev-254" target="_blank" rel="noopener" class="contact-channel-value">Kimdev-254</a>
+              </div>
+            </div>
+            <div class="contact-channel">
+              <div class="contact-channel-icon"><i class="fab fa-twitter"></i></div>
+              <div>
+                <div class="contact-channel-label">X / Twitter</div>
+                <a href="https://x.com/Kimdev254" target="_blank" rel="noopener" class="contact-channel-value">@Kimdev254</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form panel -->
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email">
+              </div>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="message">Message</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <i class="fas fa-paper-plane btn-icon"></i>
+            </button>
+            <div id="formStatus" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#" class="logo">
+          <span class="logo-bracket">&lt;</span>Kim.dev<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-copy">© 2025 Boniface Kimani. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/Kimdev-254" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/boniface-kimani-49ba6030a/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-btn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://x.com/Kimdev254" target="_blank" rel="noopener" aria-label="X / Twitter" class="social-btn">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://wa.me/+254719628538" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-btn">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
