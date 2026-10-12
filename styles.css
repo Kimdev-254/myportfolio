@@ -852,6 +852,11 @@ ul {
   transform: scale(1.04);
 }
 
+.project-card--image-only:hover .project-thumb {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .project-card:hover .project-video {
   opacity: 1;
 }
